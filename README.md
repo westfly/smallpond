@@ -5,7 +5,7 @@
 [![Docs](https://img.shields.io/badge/docs-latest-brightgreen.svg)](https://deepseek-ai.github.io/smallpond/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-A lightweight data processing framework built on DuckDB and [3FS].
+A lightweight data processing framework built on [DuckDB] and [3FS].
 
 ## Features
 
@@ -55,11 +55,15 @@ For detailed guides and API reference:
 
 ## Performance
 
-We executed the [Gray Sort benchmark] using [smallpond] on a cluster comprising 50 compute nodes and 25 storage nodes running [3FS]. The benchmark sorted 110.5TiB of data in 30 minutes and 14 seconds, achieving a throughput of 3.66TiB/min.
+We evaluated smallpond using the [GraySort benchmark] ([script]) on a cluster comprising 50 compute nodes and 25 storage nodes running [3FS].  The benchmark sorted 110.5TiB of data in 30 minutes and 14 seconds, achieving an average throughput of 3.66TiB/min.
 
-[3FS]: https://github.com/deepseek-ai/3fs
-[Gray Sort benchmark]: https://sortbenchmark.org/
-[smallpond]: benchmarks/gray_sort_benchmark.py
+Details can be found in [3FS - Gray Sort].
+
+[DuckDB]: https://duckdb.org/
+[3FS]: https://github.com/deepseek-ai/3FS
+[GraySort benchmark]: https://sortbenchmark.org/
+[script]: benchmarks/gray_sort_benchmark.py
+[3FS - Gray Sort]: https://github.com/deepseek-ai/3FS?tab=readme-ov-file#2-graysort
 
 ## Development
 
