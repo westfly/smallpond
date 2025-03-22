@@ -245,7 +245,7 @@ class DataSet(object):
             if self.root_dir is None:
                 self._absolute_paths = sorted(self.paths)
             else:
-                self._absolute_paths = [os.path.join(self.root_dir, p) for p in sorted(self.paths)]
+                self._absolute_paths = [p if p.startswith("s3") else os.path.join(self.root_dir, p) for p in sorted(self.paths)]
         return self._absolute_paths
 
     def sql_query_fragment(
